@@ -21,7 +21,7 @@ admin.site.register(models.Products, ProductsAdmin)
 
 # Register MODEL ORDERS.
 class OrdersAdmin(admin.ModelAdmin):
-  list_display = ("product", "customer", "quantity", "price", "address", "phone", "date", "status")
+  list_display = ("product", "quantity", "price", "address", "phone", "date", "status")
   
 admin.site.register(models.Order, OrdersAdmin)
 
