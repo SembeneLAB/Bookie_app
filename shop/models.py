@@ -89,7 +89,7 @@ class Cart(models.Model):
     product = models.CharField(max_length=60)
     
     def __str__(self):
-         return self.user.username 
+         return self.product 
     
     @staticmethod
     def get_all_product():
