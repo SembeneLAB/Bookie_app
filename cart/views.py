@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse
-from shop.models import Cart, Products
+from shop.models import Products
 from django.contrib import messages
 # Create your views here.
 
@@ -24,9 +24,3 @@ def add_to_cart(request, id):
     
      return redirect('cart:cart')
     #return HttpResponse(content=id)
-    
-    
-def view_cart(request):
-    cart_item = Cart.objects.filter(user=request.user)
-    context = {'cart_item': cart_item}
-    return render(request, 'cart.html', context)
